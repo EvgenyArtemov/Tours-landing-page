@@ -1,4 +1,7 @@
-:root {
+:root,
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
@@ -10,52 +13,6 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 30px; }
-
-.header {
-  position: relative;
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, #7ed56fca, #28b485cc), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  top: 40px;
-  left: 40px; }
-
-.header__logo {
-  height: 35px; }
-
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-40%, -50%);
-  text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 60px; }
-
-.heading-primary_main {
-  display: block;
-  font-size: 4rem;
-  font-weight: 400;
-  letter-spacing: 2rem;
-  animation-name: moveInLeft;
-  animation-duration: 1.5s;
-  /* animation-delay: 1s; */
-  animation-timing-function: ease-out; }
-
-.heading-primary_sub {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 1.1rem;
-  animation: moveInRight 1.5s ease-out; }
 
 @keyframes moveInLeft {
   0% {
@@ -85,8 +42,7 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
@@ -98,6 +54,9 @@ body {
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.5);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
@@ -106,6 +65,8 @@ body {
 .btn-white {
   background-color: #fff;
   color: #777; }
+  .btn-white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: '';
@@ -119,13 +80,47 @@ body {
   z-index: -1;
   transition: all .4s; }
 
-.btn-white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.5);
-  opacity: 0; }
-
 .btn_animated {
   animation: moveInButton 1s ease-out .5s;
   animation-fill-mode: backwards; }
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #7ed56fca, #28b485cc), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
+  .header__logo {
+    height: 35px; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    text-align: center; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px; }
+  .heading-primary_main {
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    /* animation-delay: 1s; */
+    animation-timing-function: ease-out; }
+  .heading-primary_sub {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1.1rem;
+    animation: moveInRight 1.5s ease-out; }
