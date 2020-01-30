@@ -8,7 +8,7 @@
         url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     &__logo-box {
         position: absolute;
@@ -35,30 +35,3 @@
 
 
 
-.heading-primary {
-    color: $color-white;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    margin-bottom: 60px;
-
-    &_main {
-        display: block;
-        font-size: 4rem;
-        font-weight: 400;
-        letter-spacing: 2rem;
-        animation-name: moveInLeft;
-        animation-duration: 1.5s;
-        /* animation-delay: 1s; */
-        animation-timing-function: ease-out;
-    }
-
-    &_sub {
-        display: block;
-        font-size: 1.2rem;
-        font-weight: 700;
-        letter-spacing: 1.1rem;
-        animation: moveInRight 1.5s ease-out; 
-    }
-
-
-}

@@ -7,7 +7,13 @@
 @import "base/_utilities";
 
 @import "components/button";
-@import "layout/header"
+@import "layout/header";
+@import "layout/about";
+@import "layout/features";
+
+
+@import "components/composition.scss";
+@import "components/features__box.scss";
 
 
 
