@@ -10,4 +10,14 @@
         url(./../img/nat-4.jpg);
     background-size: cover;
     transform: skewY(-7deg);
+
+    @include responsive (tabPortrait) {
+      flex-wrap: wrap;
+      margin-top: -5rem;
+    }
+
+    @include responsive (phone) {
+      flex-wrap: wrap;
+      margin-top: -10rem;
+    }
 }

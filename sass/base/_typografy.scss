@@ -2,7 +2,7 @@
     color: $color-white;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 
     &_main {
         display: block;
@@ -11,8 +11,12 @@
         letter-spacing: 3.5rem;
         animation-name: moveInLeft;
         animation-duration: 1.5s;
-        /* animation-delay: 1s; */
         animation-timing-function: ease-out;
+
+        @include responsive (phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
 
     &_sub {
@@ -20,7 +24,11 @@
         font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1.75rem;
-        animation: moveInRight 1.5s ease-out; 
+        animation: moveInRight 1.5s ease-out;
+        
+        @include responsive (phone) {
+            letter-spacing: .5rem;
+        }
     }
 
 
@@ -37,6 +45,14 @@
     letter-spacing: .2rem;
     transition: all .2s;
 
+    @include responsive (tabPortrait) {
+        font-size: 2.5rem;
+    }
+
+    @include responsive (phone) {
+        font-size: 2rem;
+    }
+
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
@@ -48,12 +64,21 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $medium-grey;
+
+    @include responsive (tabPortrait) {
+        text-align: center;
+    }
 }
 
 .paragraph {
     font-size: 1.6rem;
     font-family: 'Lato';
     color: $medium-grey;
+
+    @include responsive (tabPortrait) {
+        text-align: center;
+    }
+
     &:not(:last-child) {
         margin-bottom: 3rem;
     }

@@ -10,6 +10,10 @@
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+    @include responsive (phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+    }
+
     &__logo-box {
         position: absolute;
         top: 40px;
@@ -24,7 +28,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-40%, -50%);
+        transform: translate(-50%, -50%);
         text-align: center;
     }
 }

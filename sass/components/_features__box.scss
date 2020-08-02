@@ -9,6 +9,11 @@
     transition: transform .3s;
     transform: skewY(7deg);
 
+    @include responsive (tabPortrait) {
+        margin: 2rem 3rem;
+        max-width: 20rem;
+    }
+
     &:hover {
         transform: translateY(-1.5rem) scale(1.03) skewY(7deg);
     }

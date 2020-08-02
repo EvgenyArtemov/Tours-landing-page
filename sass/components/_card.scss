@@ -5,6 +5,10 @@
     height: 48rem;
     width: 30rem;
 
+    @include responsive  (tabPortrait) {
+        margin-bottom: 4rem;
+    }
+
     &__side {
         background-color: $color-white;
         font-size: 2rem;
