@@ -10,6 +10,10 @@
     &-flex {
         display: flex;
         margin: 8rem 5rem;
+
+        @include responsive (tabPortrait) {
+            flex-direction: column;
+        }
     }
 
     &__logo-box {
@@ -27,11 +31,20 @@
         padding-top: 2rem;
         display: inline-block;
         margin: 0 3%;
+
+        @include responsive (tabPortrait) {
+            padding: 1rem 0;
+        }
     }
 
     &__list {
         display: inline-flex;
         list-style: none;
+
+        @include responsive (tabPortrait) {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__item {
@@ -66,5 +79,10 @@
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
         margin: 0 3%;
+
+        @include responsive (tabPortrait) {
+            padding: 1rem 0;
+            text-align: justify;
+        }
     }
 }

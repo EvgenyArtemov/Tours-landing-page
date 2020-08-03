@@ -15,6 +15,11 @@
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
         cursor: pointer;
+
+        @include responsive (phone) {
+            height: 5rem;
+            width: 5rem;
+        }
     }
 
     &__background {
@@ -27,6 +32,13 @@
         background-image: radial-gradient($light-green, $dark-green);
         z-index: 120;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+        @include responsive (phone) {
+            height: 4rem;
+            width: 4rem;
+            top: 5rem;
+            right: 4.5rem;
+        }
 
     }
 
@@ -102,6 +114,10 @@
         position: relative;
         margin-top: 3.5rem;
 
+        @include responsive (phone) {
+            margin-top: 2.5rem;
+        }
+
         &,
         &::before,
         &::after {
@@ -109,6 +125,10 @@
             height: 2px;
             background-color: $color-grey-dark-3;
             display: inline-block;
+
+            @include responsive (phone) {
+                width: 2.4rem;
+            }
         }
 
         &::before,
