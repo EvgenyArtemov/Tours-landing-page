@@ -1,12 +1,23 @@
 
-//600px
 
 @mixin responsive ($breakpoint) {
+
+    //600px
     @if $breakpoint == phone {
         @media (max-width: 37.3em) {
             @content;
         };
     };
+
+    //700px for popup
+
+    @if $breakpoint == 700px {
+        @media (max-width: 43.75em) {
+            @content;
+        };
+    };
+
+
 
     //900px
 

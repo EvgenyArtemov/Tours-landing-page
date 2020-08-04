@@ -21,6 +21,12 @@
     min-width: 960px;
     margin: 0 auto;
 
+    @include responsive (phone) {
+        width: 100vw;
+        min-width: 770px;
+        overflow: hidden;
+    }
+
     
     &__form {
         width: 50%;
